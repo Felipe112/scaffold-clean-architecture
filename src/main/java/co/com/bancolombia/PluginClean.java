@@ -43,6 +43,10 @@ public class PluginClean implements Plugin<Project> {
                 .description("Generate driven adapter in infrastructure layer").group(Constants.PLUGIN_TASK_GROUP)
                 .taskAction(GenerateDrivenAdapterTask.class).build());
 
+        tasksModels.add(TaskModel.builder().name("generateHelpPackage").shortcut("ghp")
+                .description("Generate help package in infrastructure layer").group(Constants.PLUGIN_TASK_GROUP)
+                .taskAction(GenerateHelpPackageTask.class).build());
+
         tasksModels.add(TaskModel.builder().name("validateStructure").shortcut("vs")
                 .description("Validate that project references are not violated").group(Constants.PLUGIN_TASK_GROUP)
                 .taskAction(ValidateStructureTask.class).build());
